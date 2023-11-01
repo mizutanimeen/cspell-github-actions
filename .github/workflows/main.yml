@@ -24,4 +24,4 @@ jobs:
           verbose: true
       - name: error-check
         run: |
-          echo ${{ steps.spell-check.outcome }}
+          echo ${{ steps.spell-check.outputs }}
