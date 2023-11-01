@@ -24,6 +24,7 @@ jobs:
           root: '.'
           inline: warning
           strict: false
-          incremental_files_only: true
+          incremental_files_only: false # dev
+          # incremental_files_only: true
           # config: '.'
           verbose: true
