@@ -21,3 +21,6 @@ jobs:
           # incremental_files_only: true
           # config: '.'
           verbose: true
+      - name: error-check
+        run: |
+          echo ${{ steps.error_execution.outcome }}
