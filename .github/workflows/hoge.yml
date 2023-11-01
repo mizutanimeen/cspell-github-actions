@@ -7,4 +7,4 @@ jobs:
   fuga:
     runs-on: ubuntu-22.04
     steps:
-        run: echo "Hello, world!"
+        - run: echo "Hello, world!"
