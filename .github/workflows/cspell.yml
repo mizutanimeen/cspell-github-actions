@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: streetsidesoftware/cspell-action@v4
-        id: spell-check
         with:
           # github_token: '' # default: ${{ github.token }}
           files: ''
