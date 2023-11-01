@@ -11,10 +11,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: streetsidesoftware/cspell-action@v4
         with:
-          check_dot_files: explicit
+          # github_token: '' # default: ${{ github.token }}
+          files: ''
+          check_dot_files: true
           root: '.'
           inline: warning
-          strict: true
+          strict: false
           incremental_files_only: true
           config: '.'
-          verbose: false
+          verbose: true
