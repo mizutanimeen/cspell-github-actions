@@ -1,11 +1,11 @@
 name: Typo-Check-Actions
-run-name: Typo-Check
+run-name: Cspell-Action
 on:
   push:
   pull_request:
   workflow_dispatch:
 jobs:
-  Cspell-Action:
+  spell-check:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -20,3 +20,23 @@ jobs:
           incremental_files_only: true
           config: '.'
           verbose: true
+  outputs:
+    success:
+      description: |
+        "true" if no spelling issues were found, otherwise "false".
+    number_of_files_checked:
+      description: |
+        The actual number of files that were checked.
+    number_of_issues:
+      description: |
+        The number of issues found.
+    number_of_files_with_issues:
+      description: |
+        The number of files that had issues.
+    files_with_issues:
+      description: |
+        List of files with issues. Use `fromJSON()` to decode.
+        The files are relative to the repository root.
+    results:
+      description: |
+        The JSON encoded results.
