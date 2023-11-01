@@ -22,8 +22,8 @@ jobs:
           files: ''
           check_dot_files: true
           root: '.'
-          inline: warning
-          strict: true
+          inline: error
+          strict: false
           incremental_files_only: true
           # config: '.'
           verbose: true
