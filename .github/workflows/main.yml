@@ -16,7 +16,7 @@ jobs:
           check_dot_files: explicit
           root: '.'
           inline: error
-          strict: false
+          strict: true
           incremental_files_only: false # dev
           # incremental_files_only: true
           # config: '.'
