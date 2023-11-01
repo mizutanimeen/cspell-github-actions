@@ -1,0 +1,10 @@
+name: fugo
+run-name: hoge
+on:
+  push:
+  pull_request:
+jobs:
+  fuga:
+    runs-on: ubuntu-22.04
+    steps:
+        run: echo "Hello, world!"
