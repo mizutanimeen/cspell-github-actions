@@ -17,7 +17,6 @@ jobs:
           root: '.'
           inline: warning
           strict: true
-          incremental_files_only: false # dev
-          # incremental_files_only: true
+          incremental_files_only: true
           config: '.vscode/cspell.json'
           verbose: false
