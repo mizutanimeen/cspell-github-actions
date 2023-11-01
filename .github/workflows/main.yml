@@ -22,7 +22,7 @@ jobs:
           files: ''
           check_dot_files: true
           root: '.'
-          inline: warning
+          inline: error
           strict: false
           incremental_files_only: false # dev
           # incremental_files_only: true
