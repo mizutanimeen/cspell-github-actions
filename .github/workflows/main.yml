@@ -23,5 +23,8 @@ jobs:
           # config: '.'
           verbose: true
       - name: error-check
+        if: ${{ steps.spell-check.outputs.result.success == 'false' }}
         run: |
+          echo "Typo exists"
           echo ${{ steps.spell-check.outputs.result }}
+          exit 1
