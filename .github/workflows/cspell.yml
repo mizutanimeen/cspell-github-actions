@@ -1,3 +1,4 @@
+# https://github.com/marketplace/actions/cspell-action
 name: Typo-Check-Actions
 run-name: Cspell-Action
 on:
@@ -10,12 +11,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: streetsidesoftware/cspell-action@v4
         with:
-          # github_token: '' # default: ${{ github.token }}
-          files: ''
-          check_dot_files: explicit
-          root: '.'
-          inline: warning
-          strict: true
-          incremental_files_only: true
-          config: '.vscode/cspell.json'
-          verbose: false
+          # github_token: '' # Default: ${{ github.token }}
+          files: '' # Default: ALL files
+          check_dot_files: explicit # Example: explicit
+          root: '.' # Default: .
+          inline: warning # Default: warning
+          strict: true # Default: true
+          incremental_files_only: true # Example: true
+          config: '.vscode/cspell.json' # Example: '.'
+          verbose: false # Default: false
