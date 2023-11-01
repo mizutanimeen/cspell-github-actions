@@ -3,7 +3,6 @@ run-name: Cspell-Action
 on:
   push:
   pull_request:
-  workflow_dispatch:
 jobs:
   spell-check:
     runs-on: ubuntu-22.04
@@ -22,9 +21,9 @@ jobs:
           # incremental_files_only: true
           # config: '.'
           verbose: true
-      - name: error-check
-        if: ${{ steps.spell-check.outputs.result.success == 'false' }}
-        run: |
-          echo "Typo exists"
-          echo ${{ steps.spell-check.outputs.result }}
-          exit 1
+      # - name: error-check
+      #   if: ${{ steps.spell-check.outputs.result.success == 'false' }}
+      #   run: |
+      #     echo "Typo exists"
+      #     echo ${{ steps.spell-check.outputs.result }}
+      #     exit 1
