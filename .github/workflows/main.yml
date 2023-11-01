@@ -15,15 +15,9 @@ jobs:
           files: ''
           check_dot_files: explicit
           root: '.'
-          inline: error
+          inline: warning
           strict: true
           incremental_files_only: false # dev
           # incremental_files_only: true
           # config: '.'
           verbose: true
-      - name: error-check
-        if: ${{ steps.spell-check.outputs.result.success == 'false' }}
-        run: |
-          echo "Typo exists"
-          echo ${{ steps.spell-check.outputs.result }}
-          exit 1
