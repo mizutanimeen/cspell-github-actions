@@ -2,6 +2,9 @@ name: Typo-Check-Actions
 run-name: Cspell-Action
 on:
   push: 
+      branches:
+      - main
+      - master
   pull_request: 
 jobs:
   spell-check:
